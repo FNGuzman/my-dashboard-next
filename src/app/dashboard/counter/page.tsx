@@ -1,5 +1,6 @@
+import { CartCounter } from "@/shopping-cart/components";
 
-import { CartCounter } from "@/app/shopping-cart/components";
+
 
 
 export const metadata = {
