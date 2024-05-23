@@ -16,13 +16,16 @@ const getPokemons = async (limit = 20, offset = 0): Promise<SimplePokemon[]> => 
 
 }
 
+export const metadata = {
+    title: 'Pokedex',
+    description: 'Pokedex',
+};
 
 export default async function PokemonsPage() {
-
     const pokemons = await getPokemons(300);
     return (
         <div className="flex flex-col">
-            <span className="text-5xl my-2">Listado de Pókemons <small>estático</small></span>
+            <span className="text-5xl my-2">Listado de Pókemons <small className="text-blue-500">estático</small></span>
             <PokemonGrid pokemons={pokemons} />
         </div>
     );

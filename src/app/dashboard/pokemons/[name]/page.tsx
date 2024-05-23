@@ -26,7 +26,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
     try {
         const { id, name } = await getPokemon(params.name)
         return {
-            title: `#${id} - ${name}`,
+            title: `${name}`,
             description: `Página del pokemon ${name}`
         }
     } catch (error) {
@@ -43,7 +43,7 @@ const getPokemon = async (name: string): Promise<Pokemon> => {
             {
                 // cache: 'force-cache',
                 next: {
-                    revalidate: 60 * 60 * 30 * 6 //Revalidando datos
+                    revalidate: 60 * 60 * 30 * 60 //Revalidando datos
                 }
 
             }).then(resp => resp.json())
