@@ -11,8 +11,6 @@ export const PokemonGrid = ({ pokemons }: Props) => {
             {
                 pokemons.map(pokemon => (
                     <PokemonCard key={pokemon.id} pokemon={pokemon} />
-
-
                 ))
             }
 
